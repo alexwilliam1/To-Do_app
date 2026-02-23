@@ -26,7 +26,7 @@ class ToDoTile extends StatelessWidget {
             SlidableAction(
               onPressed: deleteFunction,
               icon: Icons.delete,
-              backgroundColor: Colors.red.shade500,
+              backgroundColor: Colors.red.shade500, //delete button
               borderRadius: BorderRadius.circular(12),
             ),
           ],
@@ -41,10 +41,21 @@ class ToDoTile extends StatelessWidget {
             children: [
               //checkbox
               Checkbox(
+                // fillColor: WidgetStateProperty.resolveWith((states) {
+                //   if (!states.contains(WidgetState.selected)) {
+                //     return Colors.transparent;
+                //   }
+                //   return null;
+                // }),
+                side: const BorderSide(
+                  color: Colors.black,
+                  width: 2,
+                  strokeAlign: BorderSide.strokeAlignInside,
+                ),
                 value: taskStatus,
                 onChanged: onChanged,
                 activeColor: Colors.black,
-                // checkColor: Colors.orange,
+                checkColor: Colors.orange,
               ),
               // task name
               Text(
@@ -54,6 +65,7 @@ class ToDoTile extends StatelessWidget {
                   decoration: taskStatus
                       ? TextDecoration.lineThrough
                       : TextDecoration.none,
+                  fontStyle: taskStatus ? FontStyle.italic : FontStyle.normal,
                 ),
               ),
             ],

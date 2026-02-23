@@ -18,7 +18,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      // theme: ThemeData.dark(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.orange,
+          brightness: MediaQuery.platformBrightnessOf(
+            context,
+          ), // automatico, se baseia no tema do aparelho
+        ),
+      ),
     );
   }
 }

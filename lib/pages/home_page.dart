@@ -67,14 +67,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(' TODO LIST'),
+        title: Text(' To-Do LIST'),
         centerTitle: true,
         elevation: 0,
       ),
 
       floatingActionButton: FloatingActionButton(
         onPressed: createNewTask,
-        child: Icon(Icons.add, color: Colors.black),
+        child: Icon(Icons.add, color: Colors.white),
       ),
       body: ListView.builder(
         itemCount: db.toDoList.length,
