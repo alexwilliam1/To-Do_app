@@ -41,12 +41,6 @@ class ToDoTile extends StatelessWidget {
             children: [
               //checkbox
               Checkbox(
-                // fillColor: WidgetStateProperty.resolveWith((states) {
-                //   if (!states.contains(WidgetState.selected)) {
-                //     return Colors.transparent;
-                //   }
-                //   return null;
-                // }),
                 side: const BorderSide(
                   color: Colors.black,
                   width: 2,
